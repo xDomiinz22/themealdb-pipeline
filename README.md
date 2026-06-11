@@ -93,3 +93,7 @@ Tabla `Recipes` (SQLAlchemy 2.x declarativo, modelo `Recipe`):
 - **Logging en lugar de `print`**: niveles (INFO/ERROR), timestamps, redirección a fichero y posibilidad de silenciar la salida.
 - **Corte temprano en el bucle de ingredientes**: en `extract_ingredients` (y el bucle equivalente de `meal_to_markdown`), cortar en el primer `strIngredientN` vacío en vez de recorrer siempre los 20 — **solo** si se puede garantizar que la API devuelve los ingredientes seguidos y sin huecos; con huecos, un `break` perdería los ingredientes posteriores.
 - **Volcado "catch-all" en `meal_to_markdown`**: registrar en un set las claves del meal ya consumidas por cada sección y volcar al final cualquier otro campo con valor, para no perder información si la API añade campos nuevos y sin duplicar los ya escritos.
+
+## Contexto y proceso de desarrollo
+
+En [explicacion.md](explicacion.md) se documenta el flujo de trabajo seguido para construir este pipeline: el planteamiento inicial, el prompt enviado a Claude Opus para generar los prompts secuenciales, los 5 prompts paso a paso enviados a Claude Code y los ajustes que fue necesario precisar durante el proceso.
