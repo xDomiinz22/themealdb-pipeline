@@ -191,4 +191,4 @@ Aunque posteriormente tras revisarlo tuve que especificar algunas cosas como por
 2. Que al extraer los nombres de los ingredientes, no se le añada su cantidad, cosa que hizo automáticamente pero solamente nos interesa el nombre del ingrediente y por ello tuve que especificarlo.
 3. A causa del punto anterior, dejó de guardar la cantidad en el markdown, también tuve que especificar que era necesario guardarlo.
 4. Que utilizase las librerías sqlalchemy y httpx, ya que son con las que más familiarizado estoy y son aptas para este problema.
-5. Que el campo llm_info sea nullable, porque no lo veo como obligatorio, no se sabrá si sirve hasta que se pruebe en los algoritmos de recomendación.
+
